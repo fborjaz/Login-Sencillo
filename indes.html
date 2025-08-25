@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sistema de Autenticación</title>
+</head>
+<body>
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="container" id="authContainer">
+        <div class="auth-card">
+            <button class="theme-toggle" id="themeToggle">
+                <span id="themeIcon">🌙</span>
+            </button>
+            
+            <div class="auth-header">
+                <h1 class="auth-title" id="authTitle">Iniciar Sesión</h1>
+                <p class="auth-subtitle" id="authSubtitle">Accede a tu cuenta para continuar</p>
+            </div>
+
+            <div class="auth-tabs">
+                <div class="auth-tab active" id="loginTab">Iniciar Sesión</div>
+                <div class="auth-tab" id="registerTab">Registrarse</div>
+            </div>
+
+            <form id="authForm">
+                <div class="form-group" id="nameGroup" style="display: none;">
+                    <label class="form-label" for="name">Nombre Completo</label>
+                    <input type="text" id="name" class="form-input" placeholder="Ingresa tu nombre completo">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">Correo Electrónico</label>
+                    <input type="email" id="email" class="form-input" placeholder="Ingresa tu correo electrónico" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="password">Contraseña</label>
+                    <input type="password" id="password" class="form-input" placeholder="Ingresa tu contraseña" required>
+                </div>
+
+                <div class="form-group" id="confirmPasswordGroup" style="display: none;">
+                    <label class="form-label" for="confirmPassword">Confirmar Contraseña</label>
+                    <input type="password" id="confirmPassword" class="form-input" placeholder="Confirma tu contraseña">
+                </div>
+
+                <button type="submit" class="form-button" id="submitBtn">Iniciar Sesión</button>
+                
+                <div class="error-message" id="errorMessage"></div>
+                <div class="success-message" id="successMessage"></div>
+            </form>
+        </div>
+    </div>
+
+    <div class="home-container" id="homeContainer">
+        <nav class="navbar">
+            <div class="navbar-content">
+                <div class="logo">Mi App</div>
+                <div class="user-menu">
+                    <button class="theme-toggle" id="themeToggleHome">
+                        <span id="themeIconHome">🌙</span>
+                    </button>
+                    <span class="user-name" id="userName">Usuario</span>
+                    <button class="logout-btn" id="logoutBtn">Cerrar Sesión</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="welcome-section">
+            <h1 class="welcome-title">¡Bienvenido, <span id="welcomeName">Usuario</span>!</h1>
+            <p class="welcome-subtitle">Nos alegra tenerte de vuelta. Aquí tienes un resumen de tu actividad.</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">24</div>
+                    <div class="stat-label">Días Activo</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">156</div>
+                    <div class="stat-label">Tareas Completadas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">89%</div>
+                    <div class="stat-label">Progreso General</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    
+</body>
+</html>
